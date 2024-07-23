@@ -18,7 +18,6 @@ public class Reproducer implements IReproducer {
     @SuppressWarnings("CdiInjectionPointsInspection")
     public Reproducer(@NotNull RedisDataSource redisDataSource) {
         this.redisPubSub = redisDataSource.getReactive().pubsub(byte[].class);
-        subscribeToChannelsNonWorking();
     }
 
     public void subscribeToChannelsNonWorking() {
